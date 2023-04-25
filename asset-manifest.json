@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.5388227f.css",
-    "main.js": "/static/js/main.8a5c5950.js",
+    "main.js": "/static/js/main.0e0c921a.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
     "static/media/mioneese_pic.png": "/static/media/mioneese_pic.3d1d6fa0f051bfd4a16a.png",
     "static/media/indiegogo_pic.png": "/static/media/indiegogo_pic.d6237f2c5cd115d3d250.png",
     "static/media/make_my_trip_pic.png": "/static/media/make_my_trip_pic.925b99e383da0a7b294a.png",
     "static/media/liveStyle_pic.png": "/static/media/liveStyle_pic.d6f0a44d0c48e16a43b3.png",
-    "static/media/profile pic.jpeg": "/static/media/profile pic.d3bb4cddd034533287b8.jpeg",
+    "static/media/profile pic.jpeg": "/static/media/profile pic.404d5e0b60edf7b7561a.jpeg",
     "static/media/css logo.jpg": "/static/media/css logo.6c88a58e1c65a266a4ee.jpg",
     "static/media/react logo.jpg": "/static/media/react logo.c5b86e1f2cd8f0142be9.jpg",
     "static/media/git logo.jpg": "/static/media/git logo.0fc880c3a51ae01577a6.jpg",
@@ -22,11 +22,11 @@
     "static/media/mogoDB logo.jpg": "/static/media/mogoDB logo.640cf4c071ed4a6bbd3c.jpg",
     "index.html": "/index.html",
     "main.5388227f.css.map": "/static/css/main.5388227f.css.map",
-    "main.8a5c5950.js.map": "/static/js/main.8a5c5950.js.map",
+    "main.0e0c921a.js.map": "/static/js/main.0e0c921a.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5388227f.css",
-    "static/js/main.8a5c5950.js"
+    "static/js/main.0e0c921a.js"
   ]
 }
