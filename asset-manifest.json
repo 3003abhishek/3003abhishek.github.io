@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.5388227f.css",
-    "main.js": "/static/js/main.0e0c921a.js",
+    "main.js": "/static/js/main.85275158.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
     "static/media/mioneese_pic.png": "/static/media/mioneese_pic.3d1d6fa0f051bfd4a16a.png",
     "static/media/indiegogo_pic.png": "/static/media/indiegogo_pic.d6237f2c5cd115d3d250.png",
@@ -22,11 +22,11 @@
     "static/media/mogoDB logo.jpg": "/static/media/mogoDB logo.640cf4c071ed4a6bbd3c.jpg",
     "index.html": "/index.html",
     "main.5388227f.css.map": "/static/css/main.5388227f.css.map",
-    "main.0e0c921a.js.map": "/static/js/main.0e0c921a.js.map",
+    "main.85275158.js.map": "/static/js/main.85275158.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5388227f.css",
-    "static/js/main.0e0c921a.js"
+    "static/js/main.85275158.js"
   ]
 }
