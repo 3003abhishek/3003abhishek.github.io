@@ -40,21 +40,13 @@ export const AboutMe = ({ skillsRef, aboutRef }) => {
             with optimized code that run blazing fast.
           </Text>
 
-          {/* <Link
-            style={{ color: "#373a47" }}
-            activeClass="active"
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://drive.google.com/file/d/1sCN0Fj3TAkpkPzrB-EwMq3k5P4JJev1M/view?usp=share_link"
-            download="fw19_0566-Abhishek-Jha-Resume.pdf"
-          >
-            Resume
-          </Link> */}
+         
+
 
 <Box mt={4}>
   <Button
     as="a"
-    href="https://drive.google.com/file/d/1sCN0Fj3TAkpkPzrB-EwMq3k5P4JJev1M/view?usp=share_link"
+    href="https://drive.google.com/u/0/uc?id=1sCN0Fj3TAkpkPzrB-EwMq3k5P4JJev1M&export=download"
     target="_blank"
     rel="noopener noreferrer"
     leftIcon={<FaFilePdf />}
@@ -66,6 +58,7 @@ export const AboutMe = ({ skillsRef, aboutRef }) => {
     Download Resume
   </Button>
 </Box>
+
 
 
 
