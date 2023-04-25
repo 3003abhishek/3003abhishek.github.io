@@ -1,3 +1,4 @@
+
 import { Box, Center, Container, Heading, SimpleGrid, Text } from "@chakra-ui/react";
 import { useMediaQuery } from '@chakra-ui/react';
 import "./DownArrow.css";
@@ -18,196 +19,99 @@ import hereko from "../skills_pic/hereko logo.jpg";
 import cyclic from "../skills_pic/cyclic logo.jpg";
 import git from "../skills_pic/git logo.jpg";
 
+const SkillBox = ({ image, label }) => {
+  return (
+    <Box textAlign='center'>
+      <Box w='80px' h='80px' borderRadius='50%' display='inline-block' mb='5'>
+        <img src={image} alt={label} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
+      </Box>
+      <Text color='white' fontWeight='bold'>{label}</Text>
+    </Box>
+  );
+};
 
 export const Skills = ({ skillsRef }) => {
-    const [isLargerThan600] = useMediaQuery('(min-width: 600px)');
+  const [isLargerThan600] = useMediaQuery('(min-width: 600px)');
 
-    return(
-        <Container mt={250} ref={skillsRef}>
-            
-            <Center>
-                <Heading color='#6889FF' borderBottom='2px solid #C668FF' width={100} alignContent='center'>Skills</Heading>
-            </Center>
+  return (
+    <Container mt={20} ref={skillsRef}>
+      <Center>
+        <Heading color='#6889FF' borderBottom='2px solid #C668FF' width={100} textAlign='center'>
+          Skills
+        </Heading>
+      </Center>
 
-            <Center>
-                <Heading color='White'>Front End</Heading>
-            </Center>
-            
-            {isLargerThan600 ? 
-                <Center>
-                    <SimpleGrid columns={4} spacing={10} minW={600}>
-                        <Box background='linear-gradient(to bottom right, #6889FF, #C668FF)' color='black' display='flex' justifyContent='center' border='0px solid #6889FF'>
-                            <img className="skillsLogo" src={html} alt="html" />
-                            <Text background='none' marginLeft='5px'>HTML 5</Text>
-                        </Box>
-                        <Box background='linear-gradient(to bottom right, #6889FF, #C668FF)' color='black' display='flex' justifyContent='center' border='0px solid #6889FF'>
-                            <img className="skillsLogo" src={css} alt="css" />
-                            <Text background='none' marginLeft='5px'>CSS 3</Text>
-                        </Box>
-                        <Box background='linear-gradient(to bottom right, #6889FF, #C668FF)' color='black' display='flex' justifyContent='center' border='0px solid #6889FF'>
-                            <img className="skillsLogo" src={javascript} alt="js" />
-                            <Text background='none' marginLeft='5px'>Javascript</Text>
-                        </Box>
-                        <Box background='linear-gradient(to bottom right, #6889FF, #C668FF)' color='black' display='flex' justifyContent='center' border='0px solid #6889FF'>
-                            <img className="skillsLogo" src={react} alt="react" />
-                            <Text background='none' marginLeft='5px'>React</Text>
-                        </Box>
-                        <Box background='linear-gradient(to bottom right, #6889FF, #C668FF)' color='black' display='flex' justifyContent='center' border='0px solid #6889FF'>
-                            <img className="skillsLogo" src={redux} alt="redux" />
-                            <Text background='none' marginLeft='5px'>Redux</Text>
-                        </Box>
-                        <Box background='linear-gradient(to bottom right, #6889FF, #C668FF)' color='black' display='flex' justifyContent='center' border='0px solid #6889FF'>
-                            <img className="skillsLogo" src={npm} alt="npm" />
-                            <Text background='none' marginLeft='5px'>Npm</Text>
-                        </Box>
-                        <Box background='linear-gradient(to bottom right, #6889FF, #C668FF)' color='black' display='flex' justifyContent='center' border='0px solid #6889FF'>
-                            <img className="skillsLogo" src={typeScript} alt="typeScript" />
-                            <Text background='none' marginLeft='5px'>TypeScript</Text>
-                        </Box>
-                        <Box background='linear-gradient(to bottom right, #6889FF, #C668FF)' color='black' display='flex' justifyContent='center' border='0px solid #6889FF'>
-                            <img className="skillsLogo" src={chakra} alt="chakra" />
-                            <Text background='none' marginLeft='5px'>Chart js</Text>
-                        </Box>
-                    </SimpleGrid>
-                </Center> :
-                <Center>
-                    <SimpleGrid columns={1} spacing={10} minW={120}>
-                    <Box background='linear-gradient(to bottom right, #6889FF, #C668FF)' color='black' display='flex' justifyContent='center' border='0px solid #6889FF'>
-                            <img className="skillsLogo" src={html} alt="html" />
-                            <Text background='none' marginLeft='5px'>HTML 5</Text>
-                        </Box>
-                        <Box background='linear-gradient(to bottom right, #6889FF, #C668FF)' color='black' display='flex' justifyContent='center' border='0px solid #6889FF'>
-                            <img className="skillsLogo" src={css} alt="css" />
-                            <Text background='none' marginLeft='5px'>CSS 3</Text>
-                        </Box>
-                        <Box background='linear-gradient(to bottom right, #6889FF, #C668FF)' color='black' display='flex' justifyContent='center' border='0px solid #6889FF'>
-                            <img className="skillsLogo" src={javascript} alt="js" />
-                            <Text background='none' marginLeft='5px'>Javascript</Text>
-                        </Box>
-                        <Box background='linear-gradient(to bottom right, #6889FF, #C668FF)' color='black' display='flex' justifyContent='center' border='0px solid #6889FF'>
-                            <img className="skillsLogo" src={react} alt="react" />
-                            <Text background='none' marginLeft='5px'>React</Text>
-                        </Box>
-                        <Box background='linear-gradient(to bottom right, #6889FF, #C668FF)' color='black' display='flex' justifyContent='center' border='0px solid #6889FF'>
-                            <img className="skillsLogo" src={redux} alt="redux" />
-                            <Text background='none' marginLeft='5px'>Redux</Text>
-                        </Box>
-                        <Box background='linear-gradient(to bottom right, #6889FF, #C668FF)' color='black' display='flex' justifyContent='center' border='0px solid #6889FF'>
-                            <img className="skillsLogo" src={npm} alt="npm" />
-                            <Text background='none' marginLeft='5px'>Npm</Text>
-                        </Box>
-                        <Box background='linear-gradient(to bottom right, #6889FF, #C668FF)' color='black' display='flex' justifyContent='center' border='0px solid #6889FF'>
-                            <img className="skillsLogo" src={typeScript} alt="tailwind" />
-                            <Text background='none' marginLeft='5px'>TypeScript</Text>
-                        </Box>
-                        <Box background='linear-gradient(to bottom right, #6889FF, #C668FF)' color='black' display='flex' justifyContent='center' border='0px solid #6889FF'>
-                            <img className="skillsLogo" src={chakra} alt="chart" />
-                            <Text background='none' marginLeft='5px'>Chakra</Text>
-                        </Box>
-                    </SimpleGrid>
-                </Center> }
-            
+      <Box mt={16}>
+        <Center>
+          <Heading color='white' as='h2' size='md'>
+            Front End
+          </Heading>
+        </Center>
 
-            <Center mt={20}>
-                <Heading color='White'>Back End</Heading>
-            </Center>
-            
-            {isLargerThan600 ? 
-            <Center>
-                <SimpleGrid columns={4} spacing={10} minW={600}>
-                    <Box background='linear-gradient(to bottom right, #6889FF, #C668FF)' color='black' display='flex' justifyContent='center' border='0px solid #6889FF'>
-                        <img className="skillsLogo" src={node} alt="node" />
-                        <Text background='none' marginLeft='5px'>Node js</Text>
-                    </Box>
-                    <Box background='linear-gradient(to bottom right, #6889FF, #C668FF)' color='black' display='flex' justifyContent='center' border='0px solid #6889FF'>
-                        <img className="skillsLogo" src={express} alt="express" />
-                        <Text background='none' marginLeft='5px'>Express js</Text>
-                    </Box>
-                    <Box background='linear-gradient(to bottom right, #6889FF, #C668FF)' color='black' display='flex' justifyContent='center' border='0px solid #6889FF'>
-                        <img className="skillsLogo" src={mongoDB} alt="mongodb" />
-                        <Text background='none' marginLeft='5px'>MongoDb</Text>
-                    </Box>
-                    <Box background='linear-gradient(to bottom right, #6889FF, #C668FF)' color='black' display='flex' justifyContent='center' border='0px solid #6889FF'>
-                        <img className="skillsLogo" src={postman} alt="postman" />
-                        <Text background='none' marginLeft='5px'>Postman</Text>
-                    </Box>
-                </SimpleGrid>
-            </Center> :
-            <Center>
-                <SimpleGrid columns={1} spacing={10} minW={120}>
-                    <Box background='linear-gradient(to bottom right, #6889FF, #C668FF)' color='black' display='flex' justifyContent='center' border='0px solid #6889FF'>
-                        <img className="skillsLogo" src={node} alt="node" />
-                        <Text background='none' marginLeft='5px'>Node js</Text>
-                    </Box>
-                    <Box background='linear-gradient(to bottom right, #6889FF, #C668FF)' color='black' display='flex' justifyContent='center' border='0px solid #6889FF'>
-                        <img className="skillsLogo" src={express} alt="express" />
-                        <Text background='none' marginLeft='5px'>Express js</Text>
-                    </Box>
-                    <Box background='linear-gradient(to bottom right, #6889FF, #C668FF)' color='black' display='flex' justifyContent='center' border='0px solid #6889FF'>
-                        <img className="skillsLogo" src={mongoDB} alt="mongodb" />
-                        <Text background='none' marginLeft='5px'>MongoDb</Text>
-                    </Box>
-                    <Box background='linear-gradient(to bottom right, #6889FF, #C668FF)' color='black' display='flex' justifyContent='center' border='0px solid #6889FF'>
-                        <img className="skillsLogo" src={postman} alt="postman" />
-                        <Text background='none' marginLeft='5px'>Postman</Text>
-                    </Box>
-                </SimpleGrid>
-            </Center> }
+        <Center mt={8}>
+          <SimpleGrid columns={isLargerThan600 ? 4 : 1} spacing={10} minW={isLargerThan600 ? 600 : 120}>
+            <SkillBox image={html} label='HTML 5' />
+            <SkillBox image={css} label='CSS 3' />
+            <SkillBox image={javascript} label='JavaScript' />
+            <SkillBox image={react} label='React' />
+            <SkillBox image={redux} label='Redux' />
+            <SkillBox image={npm} label='Npm' />
+            <SkillBox image={typeScript} label='TypeScript' />
+            <SkillBox image={chakra} label='Chart js' />
+          </SimpleGrid>
+        </Center>
+      </Box>
 
-            <Center mt={20}>
-                <Heading color='White'>Hosting Platform</Heading>
-            </Center>
+      <Box mt={16}>
+        <Center>
+          <Heading color='white' as='h2' size='md'>
+            Back End
+          </Heading>
+        </Center>
 
-            {isLargerThan600 ? 
-            <Center>
-                <SimpleGrid columns={2} spacing={10} minW={300}>
-                    <Box background='linear-gradient(to bottom right, #6889FF, #C668FF)' color='black' display='flex' justifyContent='center' border='0px solid #6889FF'>
-                        <img className="skillsLogo" src={hereko} alt="heroku" />
-                        <Text background='none' marginLeft='5px'>Heroku</Text>
-                    </Box>
-                    <Box background='linear-gradient(to bottom right, #6889FF, #C668FF)' color='black' display='flex' justifyContent='center' border='0px solid #6889FF'>
-                        <img className="skillsLogo" src={cyclic} alt="cyclic" />
-                        <Text background='none' marginLeft='5px'>Cyclic.sh</Text>
-                    </Box>
-                </SimpleGrid>
-            </Center> :
-            <Center>
-                <SimpleGrid columns={1} spacing={10} minW={150}>
-                    <Box background='linear-gradient(to bottom right, #6889FF, #C668FF)' color='black' display='flex' justifyContent='center' border='0px solid #6889FF'>
-                        <img className="skillsLogo" src={hereko} alt="heroku" />
-                        <Text background='none' marginLeft='5px'>Heroku</Text>
-                    </Box>
-                    <Box background='linear-gradient(to bottom right, #6889FF, #C668FF)' color='black' display='flex' justifyContent='center' border='0px solid #6889FF'>
-                        <img className="skillsLogo" src={cyclic} alt="heroku" />
-                        <Text background='none' marginLeft='5px'>Cyclic.sh</Text>
-                    </Box>
-                </SimpleGrid>
-            </Center> }
+        <Center mt={8}>
+          <SimpleGrid columns={isLargerThan600 ? 4 : 1} spacing={10} minW={isLargerThan600 ? 600 : 120}>
+            <SkillBox image={node} label='Node.js' />
+            <SkillBox image={express} label='Express.js' />
+            <SkillBox image={mongoDB} label='MongoDB'/>
+<SkillBox image={postman} label='Postman' />
+</SimpleGrid>
+</Center>
+</Box>
 
-            <Center mt={20}>
-                <Heading color='White'>Version Control</Heading>
-            </Center>
+php
+Copy code
+  <Box mt={16}>
+    <Center>
+      <Heading color='white' as='h2' size='md'>
+        Other Tools
+      </Heading>
+    </Center>
 
-            {isLargerThan600 ? 
-            <Center>
-                <SimpleGrid columns={1} spacing={0} minW={150}>
-                    <Box background='linear-gradient(to bottom right, #6889FF, #C668FF)' color='black' display='flex' justifyContent='center' border='0px solid #6889FF'>
-                        <img className="skillsLogo" src={git} alt="git" />
-                        <Text background='none' marginLeft='5px'>GIT</Text>
-                    </Box>
-                </SimpleGrid>
-            </Center>
-            :
-            <Center>
-                <SimpleGrid columns={1} spacing={0} minW={120}>
-                    <Box background='linear-gradient(to bottom right, #6889FF, #C668FF)' color='black' display='flex' justifyContent='center' border='0px solid #6889FF'>
-                        <img className="skillsLogo" src={git} alt="git" />
-                        <Text background='none' marginLeft='5px'>GIT</Text>
-                    </Box>
-                </SimpleGrid>
-            </Center>
-            }
-            
-        </Container>
-    )
+    <Center mt={8}>
+      <SimpleGrid columns={isLargerThan600 ? 4 : 1} spacing={10} minW={isLargerThan600 ? 600 : 120}>
+        <SkillBox image={hereko} label='Heroku' />
+        <SkillBox image={cyclic} label='Cyclic CI/CD' />
+        <SkillBox image={git} label='Git' />
+      </SimpleGrid>
+    </Center>
+  </Box>
+
+  <Box mt={20} textAlign='center'>
+    <Text color='white'>
+      <i>Note: The skill level displayed here is based on my personal assessment of my proficiency with each tool. It does not necessarily reflect industry standards or actual skill level.</i>
+    </Text>
+  </Box>
+
+  <Box mt={16} textAlign='center'>
+    <a href='#portfolio'>
+      <div className='arrow'>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </a>
+  </Box>
+</Container>
+);
 };

@@ -1,88 +1,83 @@
 import { Box, Center, SimpleGrid, Image, Text, Link } from '@chakra-ui/react';
 import { useMediaQuery } from '@chakra-ui/react';
 import { BsChevronDoubleDown } from 'react-icons/bs';
+
+import { Button } from '@chakra-ui/react';
+import { FaFilePdf } from 'react-icons/fa';
+
 import "./DownArrow.css";
 import "./ResumeButton.css";
 import "./About.css";
 import profile from "../images/profile pic.jpeg"
 
 export const AboutMe = ({ skillsRef, aboutRef }) => {
-    const [isLargerThan900] = useMediaQuery('(min-width: 900px)');
+  const [isLargerThan1200] = useMediaQuery('(min-width: 1200px)');
+  const [isLargerThan900] = useMediaQuery('(min-width: 900px)');
 
-    return (
-        <Center mt={60} ref={aboutRef}>
+  return (
+    <Center mt={60} ref={aboutRef}>
+      <SimpleGrid columns={isLargerThan1200 ? 2 : 1} spacing={0}>
+        <Box>
+          <Image
+            boxSize={isLargerThan1200 ? "500px" : "300px"}
+            height="650px"
+            objectFit="cover"
+            borderRadius="50% "
+            ml={isLargerThan1200 ? 100 : 0}
+            mr={isLargerThan1200 ? 0 : 2}
+            src={profile}
+            alt="Abhishek Jha"
+          />
+        </Box>
+        <Box color="white" mt={isLargerThan1200 ? 150 : 6} minW={isLargerThan1200 ? 500 : 300}>
+          <Text fontFamily="helvetica" className="textStyle" fontSize={isLargerThan1200 ? 25 : 20}>
+            Hi I'm Abhishek Jha
+          </Text>
 
-            {isLargerThan900 ? 
-            <SimpleGrid columns={2} spacing={0}>
-                <Box>
-                    <Image 
-                        boxSize='500px'
-                        height='650px'
-                        objectFit='cover'
-                        borderRadius='50% '
-                        ml={100}
-                        src={profile} alt='Abhishek Jha' />
-                </Box>
-                <Box color='white' mr={200} mt={150} minW={500}>
-                    <Text fontFamily='helvetica' className='textStyle'>
-                        {/* Hi I'm<strong style={{fontSize: "50px", color:"#6889FF"}}>Abhishek Jha</strong>  */}
-                        Hi I'm Abhishek Jha
-                    </Text>
-                    
-                    <Text fontSize='18px'>
-                        A <strong style={{color:"#6889FF"}}>Full Stack Web Developer</strong> based in India. A creative coder who specializes in MERN stack. I make it my mission to design pixel-perfect websites or applications with optimized code that run blazing fast.
-                    </Text>
+          <Text fontSize={isLargerThan1200 ? 18 : 14} pl={isLargerThan1200 ? 0 : 4} pr={isLargerThan1200 ? 10 : 4}>
+            A <strong style={{ color: "#6889FF" }}>Full Stack Web Developer</strong> based in India. A creative
+            coder who specializes in MERN stack. I make it my mission to design pixel-perfect websites or applications
+            with optimized code that run blazing fast.
+          </Text>
 
-                    <Link margin="auto" className='link' href="https://drive.google.com/uc?export=download&id=1VTMMOMyo0oJbkQMJwPYYc5SQXUIbxS7S" download="fw19_0566-Abhishek-Jha-Resume" target='_blank'>
-                        <span>Resume</span>
-                        <div class="wave"></div>
-                    </Link>
-                </Box>
-            </SimpleGrid> 
-            :
-            <SimpleGrid columns={1} spacing={0}>
-            <Box>
-                <Image 
-                    boxSize='300px'
-                    height='650px'
-                    objectFit='cover'
-                    borderRadius='50'
-                    src={profile} alt='Abhishek Jha' />
-            </Box>
-            <Box color='white' minW={300}>
-                <Text fontFamily='helvetica' className='textStyle' fontSize={20}>
-                    {/* Hi I'm<strong style={{fontSize: "40px", color:"#6889FF"}}>Abhishek Jha</strong> */}
-                    Hi I'm Abhishek Jha
-                </Text>
-                
-                <Text fontSize='14px' paddingLeft={15} paddingRight={15}>
-                    A <strong style={{color:"#6889FF"}}>Full Stack Web Developer</strong> based in India. A creative coder who specializes in MERN stack. I make it my mission to design pixel-perfect websites or applications with optimized code that run blazing fast.
-                </Text>
+          {/* <Link
+            style={{ color: "#373a47" }}
+            activeClass="active"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://drive.google.com/file/d/1sCN0Fj3TAkpkPzrB-EwMq3k5P4JJev1M/view?usp=share_link"
+            download="fw19_0566-Abhishek-Jha-Resume.pdf"
+          >
+            Resume
+          </Link> */}
 
-                <Link margin="auto" className='link' href="https://drive.google.com/uc?export=download&id=1VTMMOMyo0oJbkQMJwPYYc5SQXUIbxS7S" download="fw19_0566-Abhishek-Jha-Resume" target='_blank' >
-                    <span>Resume</span>
-                    <div class="wave"></div>
-                </Link>
-            </Box>
-        </SimpleGrid>
-            }
-            {/* <Box mt={400} pos="absolute">
-                <BsChevronDoubleDown 
-                    color='#C668FF'    
-                    size={40} 
-                    cursor='pointer' 
-                    className='bounce'
-                    onClick={() => {
-                        skillsRef.current.scrollIntoView(
-                            {
-                                behavior: "smooth",
-                            }
-                        )
-                    }}
-                />
-            </Box> */}
+<Box mt={4}>
+  <Button
+    as="a"
+    href="https://drive.google.com/file/d/1sCN0Fj3TAkpkPzrB-EwMq3k5P4JJev1M/view?usp=share_link"
+    target="_blank"
+    rel="noopener noreferrer"
+    leftIcon={<FaFilePdf />}
+    colorScheme="blue"
+    size="md"
+    _hover={{ bg: 'blue.600' }}
+    download="fw19_0566-Abhishek-Jha-Resume.pdf"
+  >
+    Download Resume
+  </Button>
+</Box>
 
-        </Center>
-    );
+
+
+
+
+
+
+
+        </Box>
+      </SimpleGrid>
+
+      
+    </Center>
+  );
 };
-

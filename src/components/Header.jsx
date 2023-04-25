@@ -65,10 +65,20 @@ export const Header = ({ homeRef,aboutRef, skillsRef, projectRef, contactRef }) 
                                 }
                             )
                         }}>
-                       <a style={{textDecoration:"none"}} href="https://drive.google.com/uc?export=download&id=1VTMMOMyo0oJbkQMJwPYYc5SQXUIbxS7S" download="fw19_0566-Abhishek-Jha-Resume" target='_blank' >
+                       {/* <a style={{textDecoration:"none"}} href="https://drive.google.com/uc?export=download&id=1VTMMOMyo0oJbkQMJwPYYc5SQXUIbxS7S" download="fw19_0566-Abhishek-Jha-Resume" target='_blank' >
                     <span>Resume</span>
                     <div class="wave"></div>
-                </a>
+                </a> */}
+
+<a  style={{textDecoration:"none"}}
+              activeClass="active"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://drive.google.com/file/d/1sCN0Fj3TAkpkPzrB-EwMq3k5P4JJev1M/view?usp=share_link"
+              download="fw19_0566-Abhishek-Jha-Resume.pdf" >
+              Resume
+
+            </a>
 
                         </Box>
 
@@ -135,10 +145,20 @@ export const Header = ({ homeRef,aboutRef, skillsRef, projectRef, contactRef }) 
                                 }
                             )
                         }}>
-                       <a   href="https://drive.google.com/uc?export=download&id=1VTMMOMyo0oJbkQMJwPYYc5SQXUIbxS7S" download="fw19_0566-Abhishek-Jha-Resume" target='_blank' >
+                       {/* <a   href="https://drive.google.com/uc?export=download&id=1VTMMOMyo0oJbkQMJwPYYc5SQXUIbxS7S" download="fw19_0566-Abhishek-Jha-Resume" target='_blank' >
                     Resume
                     
-                </a>
+                </a> */}
+
+<a style={{textDecoration:"none"}}
+              activeClass="active"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://drive.google.com/file/d/1sCN0Fj3TAkpkPzrB-EwMq3k5P4JJev1M/view?usp=share_link"
+              download="fw19_0566-Abhishek-Jha-Resume.pdf" >
+              Resume
+
+            </a>
 
                         </Box>
 
