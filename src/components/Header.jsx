@@ -74,7 +74,7 @@ export const Header = ({ homeRef,aboutRef, skillsRef, projectRef, contactRef }) 
               activeClass="active"
               target="_blank"
               rel="noopener noreferrer"
-              href="https://drive.google.com/u/0/uc?id=1sCN0Fj3TAkpkPzrB-EwMq3k5P4JJev1M&export=download"
+              href="https://drive.google.com/file/d/1sCN0Fj3TAkpkPzrB-EwMq3k5P4JJev1M/view?usp=sharing"
               download="fw19_0566-Abhishek-Jha-Resume.pdf" >
               Resume
 
@@ -154,7 +154,7 @@ export const Header = ({ homeRef,aboutRef, skillsRef, projectRef, contactRef }) 
               activeClass="active"
               target="_blank"
               rel="noopener noreferrer"
-              href="https://drive.google.com/u/0/uc?id=1sCN0Fj3TAkpkPzrB-EwMq3k5P4JJev1M&export=download"
+              href="https://drive.google.com/file/d/1sCN0Fj3TAkpkPzrB-EwMq3k5P4JJev1M/view?usp=sharing"
               download="fw19_0566-Abhishek-Jha-Resume.pdf" >
               Resume
 
