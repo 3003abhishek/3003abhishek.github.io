@@ -191,14 +191,14 @@ export const Projects = ({ projectRef }) => {
 
                 <Container mt={150} mb={150} ref={projectRef}>
                 <Center>
-                    <Heading color='#6889FF' borderBottom='2px solid #C668FF' width={100} alignContent='center'>Projects</Heading>
+                    <Heading color='#6889FF' borderBottom='2px solid #C668FF' width={90} alignContent='center'>Projects</Heading>
                 </Center>
                 {/* minW={300} borderRadius='20px' _hover={{ boxShadow: '0 0 8px #6889FF' }} */}
                 <Center mt={60} ml={30} mr={30}>
                     <SimpleGrid columns={1} spacing={30}>
                         <Container className="projectCard">
                             <Box borderRadius='20px'>
-                                <Image borderRadius='20px 20px 0px 0px' width={"100%"} minW={300} height={300} src={indegiogo} alt="groww-project" />
+                                <Image borderRadius='20px 20px 0px 0px' width={"85%"} minW={270} height={300} src={indegiogo} alt="groww-project" />
                             </Box>
                             <Box mt={-4} p={10} className="projectButton">
                                 <Box className="projectDescBox">
@@ -238,7 +238,7 @@ export const Projects = ({ projectRef }) => {
 
                         <Container className="projectCard">
                             <Box borderRadius='20px'> 
-                                <Image borderRadius='20px 20px 0px 0px' width={"100%"} minW={300} height={300} src={liveStyle_pic} alt="adidas-project" />
+                                <Image borderRadius='20px 20px 0px 0px' width={"85%"} minW={270} height={300} src={liveStyle_pic} alt="adidas-project" />
                             </Box>
 
                             <Box mt={-4} p={10} className="projectButton">
@@ -277,7 +277,7 @@ export const Projects = ({ projectRef }) => {
 
                         <Container className="projectCard">
                         <Box borderRadius='20px'> 
-                            <Image borderRadius='20px 20px 0px 0px' width={"100%"} minW={300} height={300} src={mmt_pic} alt="nordstrom-project" />
+                            <Image borderRadius='20px 20px 0px 0px' width={"85%"} minW={270} height={300} src={mmt_pic} alt="nordstrom-project" />
                         </Box>
 
                         <Box mt={-4} p={10} className="projectButton">
@@ -318,7 +318,7 @@ export const Projects = ({ projectRef }) => {
 
                         <Container className="projectCard">
                         <Box borderRadius='20px'> 
-                            <Image borderRadius='20px 20px 0px 0px' width={"100%"} minW={300} height={300} src={mioneese} alt="Mionesee" />
+                            <Image borderRadius='20px 20px 0px 0px' width={"85%"} minW={270} height={300} src={mioneese} alt="Mionesee" />
                         </Box>
 
                         <Box mt={-4} p={10} className="projectButton">
