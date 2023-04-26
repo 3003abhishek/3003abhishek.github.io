@@ -6,6 +6,14 @@ import { Link } from 'react-router-dom';
 export const Header = ({ homeRef,aboutRef, skillsRef, projectRef, contactRef }) => {
     const [isLargerThan600] = useMediaQuery('(min-width: 600px)');
 
+
+    const handleDownload = () => {
+        const driveUrl = "https://drive.google.com/file/d/1sCN0Fj3TAkpkPzrB-EwMq3k5P4JJev1M/view";
+        const downloadUrl = "https://drive.google.com/u/0/uc?id=1sCN0Fj3TAkpkPzrB-EwMq3k5P4JJev1M&export=download";
+        window.open(driveUrl, "_blank");
+        window.location.href = downloadUrl;
+      };
+
     return (
             <>
             {isLargerThan600 ?
@@ -58,27 +66,10 @@ export const Header = ({ homeRef,aboutRef, skillsRef, projectRef, contactRef }) 
 
 
                 <Box color='#C668FF' _hover={{ cursor: 'pointer', borderBottom: '2px solid #6889FF' }}
-                        onClick={() => {
-                            contactRef.current.scrollIntoView(
-                                {
-                                    behavior: "smooth",
-                                }
-                            )
-                        }}>
-                       {/* <a style={{textDecoration:"none"}} href="https://drive.google.com/uc?export=download&id=1VTMMOMyo0oJbkQMJwPYYc5SQXUIbxS7S" download="fw19_0566-Abhishek-Jha-Resume" target='_blank' >
-                    <span>Resume</span>
-                    <div class="wave"></div>
-                </a> */}
+                        onClick={handleDownload}>
+                    
 
-<a  style={{textDecoration:"none",color:"red"}}
-              activeClass="active"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://drive.google.com/file/d/1sCN0Fj3TAkpkPzrB-EwMq3k5P4JJev1M/view?usp=sharing"
-              download="fw19_0566-Abhishek-Jha-Resume.pdf" >
-              Resume
-
-            </a>
+                       Resume
 
                         </Box>
 
@@ -137,28 +128,11 @@ export const Header = ({ homeRef,aboutRef, skillsRef, projectRef, contactRef }) 
              
 
 
-<Box color='#C668FF' marginLeft={5} _hover={{ cursor: 'pointer', borderBottom: '2px solid #6889FF' }}
-                        onClick={() => {
-                            contactRef.current.scrollIntoView(
-                                {
-                                    behavior: "smooth",
-                                }
-                            )
-                        }}>
-                       {/* <a   href="https://drive.google.com/uc?export=download&id=1VTMMOMyo0oJbkQMJwPYYc5SQXUIbxS7S" download="fw19_0566-Abhishek-Jha-Resume" target='_blank' >
-                    Resume
+<Box color='#C668FF' _hover={{ cursor: 'pointer', borderBottom: '2px solid #6889FF' }}
+                        onClick={handleDownload}>
                     
-                </a> */}
 
-<a style={{color:"red"}}
-              activeClass="active"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://drive.google.com/file/d/1sCN0Fj3TAkpkPzrB-EwMq3k5P4JJev1M/view?usp=sharing"
-              download="fw19_0566-Abhishek-Jha-Resume.pdf" >
-              Resume
-
-            </a>
+                       Resume
 
                         </Box>
 

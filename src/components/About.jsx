@@ -1,7 +1,7 @@
 import { Box, Center, SimpleGrid, Image, Text, Link } from '@chakra-ui/react';
 import { useMediaQuery } from '@chakra-ui/react';
 import { BsChevronDoubleDown } from 'react-icons/bs';
-
+import {useState} from "react";
 import { Button } from '@chakra-ui/react';
 import { FaFilePdf } from 'react-icons/fa';
 
@@ -11,14 +11,20 @@ import "./About.css";
 import profile from "../images/profile pic.jpg"
 
 export const AboutMe = ({ skillsRef, aboutRef }) => {
+  const [downloaded, setDownloaded] = useState(false);
   const [isLargerThan1200] = useMediaQuery('(min-width: 1200px)');
   const [isLargerThan900] = useMediaQuery('(min-width: 900px)');
 
 
-  const handleDownload = () => {
-    window.location.href = "https://drive.google.com/file/d/1sCN0Fj3TAkpkPzrB-EwMq3k5P4JJev1M/view?usp=sharing";
-  };
+ 
 
+  const handleDownload = () => {
+    const driveUrl = "https://drive.google.com/file/d/1sCN0Fj3TAkpkPzrB-EwMq3k5P4JJev1M/view";
+    const downloadUrl = "https://drive.google.com/u/0/uc?id=1sCN0Fj3TAkpkPzrB-EwMq3k5P4JJev1M&export=download";
+    window.open(driveUrl, "_blank");
+    window.location.href = downloadUrl;
+  };
+  
   return (
     <Center mt={60} ref={aboutRef}>
       <SimpleGrid columns={isLargerThan1200 ? 2 : 1} spacing={0}>
@@ -50,22 +56,21 @@ export const AboutMe = ({ skillsRef, aboutRef }) => {
 
 
 
-      <Box mt={4} onClick={handleDownload}>
-      <Button
-    as="a"
-    href="https://drive.google.com/u/0/uc?id=1sCN0Fj3TAkpkPzrB-EwMq3k5P4JJev1M&export=download"
-    target="_blank"
-    rel="noopener noreferrer"
-    leftIcon={<FaFilePdf />}
-    colorScheme="red"
-    color="red"
-    size="md"
-    _hover={{ bg: 'blue.600' }}
-    download="fw19_0566-Abhishek-Jha-Resume.pdf"
-  >
-    Download Resume
-  </Button>
-      </Box>
+          <Box mt={4}>
+          <Button
+  leftIcon={<FaFilePdf />}
+  colorScheme="red"
+  color="red"
+  size="md"
+  _hover={{ bg: 'blue.600' }}
+  onClick={handleDownload}
+>
+  Download Resume
+</Button>
+
+
+    </Box>
+  
   
 
 
