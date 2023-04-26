@@ -70,7 +70,7 @@ export const Header = ({ homeRef,aboutRef, skillsRef, projectRef, contactRef }) 
                     <div class="wave"></div>
                 </a> */}
 
-<a  style={{textDecoration:"none"}}
+<a  style={{textDecoration:"none",color:"red"}}
               activeClass="active"
               target="_blank"
               rel="noopener noreferrer"
@@ -150,7 +150,7 @@ export const Header = ({ homeRef,aboutRef, skillsRef, projectRef, contactRef }) 
                     
                 </a> */}
 
-<a style={{textDecoration:"none"}}
+<a style={{color:"red"}}
               activeClass="active"
               target="_blank"
               rel="noopener noreferrer"
@@ -169,5 +169,6 @@ export const Header = ({ homeRef,aboutRef, skillsRef, projectRef, contactRef }) 
     );
 }
 
-// 'linear-gradient(to bottom right, #6889FF, #C668FF)'
-//, blogRef
+
+
+

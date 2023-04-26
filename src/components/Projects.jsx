@@ -6,28 +6,13 @@ import mmt_pic from "../projects_pic/make_my_trip_pic.png"
 import indegiogo from "../projects_pic/indiegogo_pic.png";
 import mioneese from "../projects_pic/mioneese_pic.png";
 import "./Video.css";
-// import { useState } from "react";
-// import { DemoVideoOne, DemoVideoThree } from "./DemoVideo";
+
 import "./Projects.css";
 import { m } from "framer-motion";
 
 export const Projects = ({ projectRef }) => {
     const [isLargerThan1200] = useMediaQuery('(min-width: 1200px)');
-    // const [showVideoOne, setShowVideoOne] = useState(false);
-    // const [showVideoTwo, setShowVideoTwo] = useState(false);
-    // const [showVideoThree, setShowVideoThree] = useState(false);
-
-    // const closeDemoVideoOne = () => {
-    //     setShowVideoOne(false);
-    // }
-
-    // const closeDemoVideoTwo = () => {
-    //     setShowVideoTwo(false);
-    // }
-
-    // const closeDemoVideoThree = () => {
-    //     setShowVideoThree(false);
-    // }
+   
 
     return(
         <> 
@@ -377,3 +362,9 @@ export const Projects = ({ projectRef }) => {
         </>
     )
 };
+
+
+
+
+
+

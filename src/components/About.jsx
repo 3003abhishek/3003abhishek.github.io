@@ -8,11 +8,16 @@ import { FaFilePdf } from 'react-icons/fa';
 import "./DownArrow.css";
 import "./ResumeButton.css";
 import "./About.css";
-import profile from "../images/profile pic.jpeg"
+import profile from "../images/profile pic.jpg"
 
 export const AboutMe = ({ skillsRef, aboutRef }) => {
   const [isLargerThan1200] = useMediaQuery('(min-width: 1200px)');
   const [isLargerThan900] = useMediaQuery('(min-width: 900px)');
+
+
+  const handleDownload = () => {
+    window.location.href = "https://drive.google.com/file/d/1sCN0Fj3TAkpkPzrB-EwMq3k5P4JJev1M/view?usp=sharing";
+  };
 
   return (
     <Center mt={60} ref={aboutRef}>
@@ -43,22 +48,25 @@ export const AboutMe = ({ skillsRef, aboutRef }) => {
          
 
 
-<Box mt={4}>
-  <Button
+
+
+      <Box mt={4} onClick={handleDownload}>
+      <Button
     as="a"
     href="https://drive.google.com/u/0/uc?id=1sCN0Fj3TAkpkPzrB-EwMq3k5P4JJev1M&export=download"
     target="_blank"
     rel="noopener noreferrer"
     leftIcon={<FaFilePdf />}
-    colorScheme="blue"
+    colorScheme="red"
+    color="red"
     size="md"
     _hover={{ bg: 'blue.600' }}
     download="fw19_0566-Abhishek-Jha-Resume.pdf"
   >
     Download Resume
   </Button>
-</Box>
-
+      </Box>
+  
 
 
 
